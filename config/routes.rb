@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  #get 'residents/index'
+
   resources :miscellaneous_contacts
   resources :contacts_categories
   resources :inews
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
   resources :ireceipts
   resources :contacts
   resources :associate_payments
+  resources :residents
 
   resources :associates do
     collection { post :import }

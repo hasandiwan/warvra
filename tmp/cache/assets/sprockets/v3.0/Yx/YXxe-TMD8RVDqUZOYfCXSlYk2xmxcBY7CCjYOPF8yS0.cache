@@ -1,7 +1,0 @@
-I"m(function() {
-  jQuery(function() {
-    return $('#ireceipt_rdate').datepicker();
-  });
-
-}).call(this);
-:ET

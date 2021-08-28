@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200307054111) do
+ActiveRecord::Schema.define(version: 20210825064830) do
 
   create_table "acc_accounts", force: :cascade do |t|
     t.string   "name"
@@ -269,6 +269,25 @@ ActiveRecord::Schema.define(version: 20200307054111) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "residents", force: :cascade do |t|
+    t.date     "datereceived"
+    t.date     "dateaccepted"
+    t.string   "surname"
+    t.string   "first"
+    t.string   "email"
+    t.string   "address"
+    t.string   "suburb"
+    t.string   "postcode"
+    t.string   "phone"
+    t.date     "dateceased"
+    t.string   "comment"
+    t.integer  "village_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "residents", ["village_id"], name: "index_residents_on_village_id"
 
   create_table "statuses", force: :cascade do |t|
     t.string   "name"
