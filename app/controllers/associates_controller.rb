@@ -4,6 +4,7 @@ class AssociatesController < ApplicationController
   def index
     @associates = Associate.all.order("surname ASC")
   end
+  
   def show
   end
 

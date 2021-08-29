@@ -61,6 +61,11 @@ class ResidentsController < ApplicationController
     end
   end
 
+  def import
+   Resident.import(params[:file])
+   redirect_to residents_path, notice: "Import complete!"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_resident

@@ -17,7 +17,10 @@ Rails.application.routes.draw do
   resources :ireceipts
   resources :contacts
   resources :associate_payments
-  resources :residents
+  
+  resources :residents do
+    collection { post :import }
+  end
 
   resources :associates do
     collection { post :import }
