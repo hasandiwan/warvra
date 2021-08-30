@@ -31,7 +31,6 @@ config/master.key
 
 ## Environment normalization:
 /.bundle
-.bundle/config
 /vendor/bundle
 
 # these should all be checked in to normalize the environment:
