@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210825064830) do
+ActiveRecord::Schema.define(version: 20210830015918) do
 
   create_table "acc_accounts", force: :cascade do |t|
     t.string   "name"
@@ -266,6 +266,13 @@ ActiveRecord::Schema.define(version: 20210825064830) do
 
   create_table "regions", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reminders", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "residents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

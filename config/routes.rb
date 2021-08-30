@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :reminders
   #get 'residents/index'
 
   resources :miscellaneous_contacts

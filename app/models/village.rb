@@ -11,8 +11,8 @@ class Village < ActiveRecord::Base
   
   validates :name, presence: true
   validates_uniqueness_of :name
-  validates :status_id, :presence => true
-  validates :region_id, :presence => true
+  # validates :status_id, :presence => true
+  # validates :region_id, :presence => true
 
   # paginates_per 15
 

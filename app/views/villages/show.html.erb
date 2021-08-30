@@ -128,11 +128,37 @@
       </div>
     </div>
     <hr class="style-one">
+
+    <h3>Village Residents</h3>
+     <div class="media">
+      <div class="media-body">
+        <table class="table table-hover table-bordered">
+          <thead>
+          <tr>
+            <th>Surname:</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @village.residents.each do |residents| %>
+              <tr>
+                <td>
+                  <%= residents.surname %>
+                </td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <% if current_user.try(:vip?) or current_user.try(:admin?) %>
         <%= link_to 'Edit', edit_village_path(@village), :class => "btn btn-small btn-primary" %>
         <%= link_to 'Back', villages_path, :class => "btn btn-small btn-primary" %>
     <% end %>
   </div>
+
+  
 
   <div class="col-xs-6 col-md-3">
     <% if current_user.try(:vip?) or current_user.try(:admin?) %>

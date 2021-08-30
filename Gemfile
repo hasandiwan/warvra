@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Standard Rails gems
-ruby '2.6.3'
+# ruby '2.6.3'
+ruby '2.5.0'
 
 gem 'rails', '4.2.8'
 gem 'sass-rails', '~> 5.0'
@@ -31,6 +32,7 @@ gem "puma"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.6'
 #gem "rack", ">= 2.1.4"
+#gem "nokogiri" "1.12.3"
 
 group :development do
   gem 'better_errors'

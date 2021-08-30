@@ -4,7 +4,7 @@ class ResidentsController < ApplicationController
   # GET /residents
   # GET /residents.json
   def index
-    @residents = Resident.all
+    @residents = Resident.all.order("surname ASC")
   end
 
   # GET /residents/1
@@ -74,6 +74,6 @@ class ResidentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resident_params
-      params.require(:resident).permit(:daterecieved, :dateaccepted, :surname, :first, :email, :address, :suburb, :postcode, :phone, :dateceased, :comment, :village_id)
+    params.require(:resident).permit(:datereceived, :dateaccepted, :surname, :first, :email, :address, :suburb, :postcode, :phone, :dateceased, :comment, :village_id)
     end
 end
