@@ -43,6 +43,7 @@ end
 group :development, :test do
   #gem 'sqlite3'
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   #gem 'spring'
